@@ -142,7 +142,7 @@ namespace program
                               coefficients[0], coefficients[1], coefficients[2],
                               coefficients[3], coefficients[4], coefficients[5]);
 
-                         Console.WriteLine($"x = {result.x},\ny = {result.y}");
+                         Console.WriteLine($"x = {result.x:F3},\ny = {result.y:F3}");
                     }
 
                    public static void SolveSystem3x3()
@@ -171,7 +171,7 @@ namespace program
                               coefficients[8], coefficients[9], coefficients[10], coefficients[11]);
 
                          Console.Write("ANSWER: ");
-                         Console.WriteLine($"x = {result.x},\ny = {result.y}, \nz = {result.z}");
+                         Console.WriteLine($"x = {result.x:F3},\ny = {result.y:F3}, \nz = {result.z:F3}");
                     }
                }
           }
