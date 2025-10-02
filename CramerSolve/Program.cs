@@ -81,7 +81,7 @@ namespace program
                     }
                }
 
-               static int ReadChoice()
+             static int ReadChoice()
                {
                     Console.WriteLine("\nSelect system type:");
                     Console.WriteLine("1 - System 2x2 (2 equations, 2 unknowns)");
@@ -117,7 +117,7 @@ namespace program
                               {
                                    Console.WriteLine(ex.Message);
                               }
-                         }
+                         } while (choice != 0);
                     }
 
                   public static void SolveSystem2x2()
@@ -142,7 +142,11 @@ namespace program
                               coefficients[0], coefficients[1], coefficients[2],
                               coefficients[3], coefficients[4], coefficients[5]);
 
+                         Console.WriteLine("ANSWER");
+                         Console.WriteLine("---------------------");
                          Console.WriteLine($"x = {result.x:F3},\ny = {result.y:F3}");
+                         Console.WriteLine("---------------------");
+
                     }
 
                    public static void SolveSystem3x3()
@@ -170,8 +174,11 @@ namespace program
                               coefficients[4], coefficients[5], coefficients[6], coefficients[7],
                               coefficients[8], coefficients[9], coefficients[10], coefficients[11]);
 
-                         Console.Write("ANSWER: ");
+                         Console.WriteLine("ANSWER");
+                         Console.WriteLine("---------------------");
                          Console.WriteLine($"x = {result.x:F3},\ny = {result.y:F3}, \nz = {result.z:F3}");
+                         Console.WriteLine("---------------------");
+
                     }
                }
           }
